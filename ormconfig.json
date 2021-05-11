@@ -1,18 +1,38 @@
-{
-  "username": "postgres",
-  "password": "postgres",
-  "name": "default",
-  "type": "postgres",
-  "host": "localhost",
-  "port": 5432,
-  "database": "fin_api",
-  "entities": [
-    "./src/modules/**/entities/*.ts"
-  ],
-  "migrations": [
-    "./src/database/migrations/*.ts"
-  ],
-  "cli": {
-    "migrationsDir": "./src/database/migrations"
+[
+  {
+    "username": "postgres",
+    "password": "postgres",
+    "name": "default",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "database": "fin_api",
+    "entities": [
+      "./src/modules/**/entities/*.ts"
+    ],
+    "migrations": [
+      "./src/database/migrations/*.ts"
+    ],
+    "cli": {
+      "migrationsDir": "./src/database/migrations"
+    }
+  },
+  {
+    "username": "postgres",
+    "password": "postgres",
+    "name": "tests",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "database": "fin_api_tests",
+    "entities": [
+      "./src/modules/**/entities/*.ts"
+    ],
+    "migrations": [
+      "./src/database/migrations/*.ts"
+    ],
+    "cli": {
+      "migrationsDir": "./src/database/migrations"
+    }
   }
-}
+]

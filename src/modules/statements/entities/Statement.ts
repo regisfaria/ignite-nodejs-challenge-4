@@ -10,11 +10,6 @@ import { v4 as uuid } from 'uuid';
 
 import { User } from '../../users/entities/User';
 
-enum OperationType {
-  DEPOSIT = 'deposit',
-  WITHDRAW = 'withdraw',
-}
-
 @Entity('statements')
 export class Statement {
   @PrimaryGeneratedColumn('uuid')
@@ -33,7 +28,7 @@ export class Statement {
   @Column('decimal', { precision: 5, scale: 2 })
   amount: number;
 
-  @Column({ type: 'enum', enum: OperationType })
+  @Column({ type: 'enum', enum: ['deposit', 'withdraw'] })
   type: OperationType;
 
   @CreateDateColumn()
